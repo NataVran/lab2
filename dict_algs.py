@@ -1,0 +1,36 @@
+def children18(masdic):
+    mas=[]
+    for dic in masdic:
+        for child in dic['children']:
+            if child['age']>18:
+               mas.append(dic['name'])
+               break
+    return mas
+
+ivan = {
+    "name": "ivan",
+    "age": 34,
+    "children" : [{
+        "name": "vasja",
+        "age": 12,
+    },{
+        "name": "petja",
+        "age" :10,
+    }],
+}
+
+darja = {
+    "name": "darja",
+    "age": 41,
+    "children": [{
+        "name": "mary",
+        "age":21,
+    },{
+    "name": "pavel",
+    "age":15,
+}],
+
+}
+
+emps = [ivan,darja]
+print (children18(emps))
